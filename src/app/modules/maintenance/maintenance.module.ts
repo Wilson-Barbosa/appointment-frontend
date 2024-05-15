@@ -7,8 +7,9 @@ import { ProfessionalPageComponent } from './pages/professional-page/professiona
 import { AppointmentTypePageComponent } from './pages/appointment-type-page/appointment-type-page.component';
 import { UsersPageComponent } from './pages/users-page/users-page.component';
 import { ClientsTablePageComponent } from './pages/clients-table-page/clients-table-page.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ClientFormPageComponent } from './pages/client-form-page/client-form-page.component';
 
 
 @NgModule({
@@ -18,12 +19,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         AppointmentTypePageComponent,
         UsersPageComponent,
         ClientsTablePageComponent,
+        ClientFormPageComponent,
     ],
     imports: [
         CommonModule,
         MaintenanceRoutingModule,
         FormsModule,
-        NgbModule
+        NgbModule,
+        ReactiveFormsModule
     ]
 })
 export class MaintenanceModule { }

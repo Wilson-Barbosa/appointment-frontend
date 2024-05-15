@@ -4,6 +4,12 @@
     </div>
     <div class="border rounded shadow-sm p-4">
 
+        <!-- Button to register a new client -->
+        <div class="text-end">
+            <a routerLink="/client-form" class="btn btn-primary">Novo</a>
+        </div>
+
+        <!-- Table to display clients -->
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -24,7 +30,7 @@
             <tbody>
                 <tr *ngFor="let client of clientPage.content">
                     <th scope="row">{{ client.id }}</th>
-                    <td><a href="">{{ client.name }}</a> </td>
+                    <td><a routerLink="/client-form/{{client.id}}">{{ client.name }}</a> </td>
                     <td>{{ client.phone }}</td>
                     <td>{{ client.dayOfBirth | date: 'dd/MM/yyyy' }}</td>
                     <td>
