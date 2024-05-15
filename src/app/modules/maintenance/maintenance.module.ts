@@ -6,8 +6,10 @@ import { AreaPageComponent } from './pages/area-page/area-page.component';
 import { ProfessionalPageComponent } from './pages/professional-page/professional-page.component';
 import { AppointmentTypePageComponent } from './pages/appointment-type-page/appointment-type-page.component';
 import { UsersPageComponent } from './pages/users-page/users-page.component';
-import { ClientsPageComponent } from './pages/clients-page/clients-page.component';
-
+import { ClientsTablePageComponent } from './pages/clients-table-page/clients-table-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ClientFormPageComponent } from './pages/client-form-page/client-form-page.component';
 
 
 @NgModule({
@@ -16,11 +18,15 @@ import { ClientsPageComponent } from './pages/clients-page/clients-page.componen
         ProfessionalPageComponent,
         AppointmentTypePageComponent,
         UsersPageComponent,
-        ClientsPageComponent
+        ClientsTablePageComponent,
+        ClientFormPageComponent,
     ],
     imports: [
         CommonModule,
-        MaintenanceRoutingModule
+        MaintenanceRoutingModule,
+        FormsModule,
+        NgbModule,
+        ReactiveFormsModule
     ]
 })
 export class MaintenanceModule { }

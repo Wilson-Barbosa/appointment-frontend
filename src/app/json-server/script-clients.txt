@@ -1,0 +1,10 @@
+[
+  '{{repeat(100)}}',
+  {
+
+    id: '{{index()}}',
+    name: '{{firstName()}} {{surname()}}',
+    dayOfBirth: '{{date(new Date(1950, 0, 1), new Date(), "YYYY-MM-dd")}}',
+    phone: '{{phone("(xx) xxxx-xxxx")}}'
+  }
+]
